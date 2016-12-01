@@ -22,18 +22,17 @@ namespace :swagger_ui do
         # Generate application.js
         JAVASCRIPT_FILES = [
           'jquery-1.8.0.min.js',
+          'bootstrap.min.js',
+          'highlight.7.3.pack.js',
+          'jsoneditor.js',
+          'underscore-min.js',
           'jquery.slideto.min.js',
           'jquery.wiggle.min.js',
           'jquery.ba-bbq.min.js',
           'handlebars-2.0.0.js',
           'marked.js',
-          'lodash.min.js',
           'backbone-min.js',
           'swagger-ui.min.js',
-          'highlight.9.1.0.pack.js',
-          'js-yaml.min.js',
-          'jsoneditor.min.js',
-          'object-assign-pollyfill.js',
           'swagger-oauth.js',
           'base64.js'
         ]
@@ -60,6 +59,11 @@ namespace :swagger_ui do
         # Generate application.js
         CSS_FILES = [
           'reset.css',
+          'api-explorer.css',
+          'index.css',
+          'print.css',
+          'standalone.css',
+          'typography.css',
           'screen.css'
         ]
         css_files = Dir["#{root}/app/assets/stylesheets/grape_swagger_rails/*.css"].map { |f|
