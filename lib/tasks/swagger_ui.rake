@@ -2,12 +2,12 @@ require 'git'
 
 namespace :swagger_ui do
   namespace :dist do
-    desc 'Update Swagger-UI from wordnik/swagger-ui.'
+    desc 'Update Swagger-UI from websummit/swagger-ui.'
     task :update do
       Dir.mktmpdir 'swagger-ui' do |dir|
         puts "Cloning into #{dir} ..."
-        # clone wordnik/swagger-ui
-        Git.clone 'git@github.com:wordnik/swagger-ui.git', 'swagger-ui', path: dir, depth: 0
+        # clone websummit/swagger-ui
+        Git.clone 'git@github.com:websummit/swagger-ui.git', 'swagger-ui', path: dir, depth: 0
         # prune local files
         root = File.expand_path '../../..', __FILE__
         puts "Removing files from #{root} ..."
